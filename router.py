@@ -14,11 +14,24 @@ class Router:
     def create_intf(self, intfname):
         return RouterInterface(intfname)
 
-
 class RouterInterface:
 
-    def __init__(self, intfname):
+    def __init__(self, intfname, intfstatus='shutdown'):
         self.intfname = intfname
+        self.intfstatus = intfstatus
+
+
+class RouterRoutingTable:
+    pass
+
+    def add_route(self):
+        pass
+
+    def del_route(self):
+        pass
+
+    def get_route(self):
+        pass
 
 
 rt1 = Router()
@@ -27,4 +40,6 @@ rt2 = Router('Router-2')
 print dir(rt1)
 print dir(rt2)
 print rt2.mgmtintf.intfname
+print rt2.mgmtintf.intfstatus
+
 
